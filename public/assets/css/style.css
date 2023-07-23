@@ -1,0 +1,153 @@
+
+/* Welkome */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-color: rgb(42, 46, 48);
+}
+
+.header_container,
+.content {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header_top, 
+.header_botton {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header_logo {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.search {
+    height: 25px;
+}
+
+.header_nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 12px;
+}
+
+.auth_user_name p {
+    color: #fff;
+}
+
+ .user_name {
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header_nav a:hover{
+    text-decoration: underline;
+}
+
+.header_cart a {
+    color: #fff;
+}
+
+.content {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.content h2 {
+    text-align: center;
+}
+
+.content_category,
+.content_product {
+    margin-top: 50px;
+    margin-bottom: 50px;    
+}
+.content_product h2 {
+    margin-bottom: 50px;
+}
+
+.category_block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.category_block a {
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #000;
+    padding: 5px;
+    background-color: rgb(42, 46, 48);
+
+}
+
+.category_block a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+
+.content_wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .add_cart a {
+    color: #000;
+    text-decoration: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+} */
+
+.product_img {
+    width: 150px;
+    height: 220px;
+}
+
+.product_img img {
+    width: 100%;
+}
+
+
+
+/* Cart */
+
+
+.product {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 10px;
+}
+
+.product_quantity input {
+    width: 50px;
+}
+
+.product_sum {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sum_text {
+    font-size: 22px;
+}
+
+.sum_amount{
+    font-size: 22px;
+    margin-left: 10px;
+}
+

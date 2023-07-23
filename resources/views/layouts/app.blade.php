@@ -21,6 +21,13 @@
                         <input type="text" name="search" class="search" placeholder="Search for product">
                         <button type="submit">Search</button>
                     </form>
+                    @if (count($errors) > 0)
+                        <ul>
+                        @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                        @endforeach
+                        </ul>
+                    @endif
                 </div>
             </div>
             <div class="header_botton">

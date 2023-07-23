@@ -2,6 +2,7 @@
 @section('content')
     
 
+
 <div class="content">
     <div class="content_product">   
             <h2>Возможно вы искали:</h2>

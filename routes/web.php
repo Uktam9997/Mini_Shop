@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Validator;
 
 /*
 |--------------------------------------------------------------------------
@@ -95,19 +96,15 @@ Route::get('product/categorys/{id}', function($id){
 })->name('product_filtr');
 
 Route::post('/search', function(Request $request){
-    $search = $request->search;
+    $search = Validator::make($request->only('search'), [
+        'search' => 'required'
+    ]);
+
+    if($search->fails()){
+        return back()->withErrors('заполните поля');
+    }
 
     $searchProduct = DB::table('products')->where('name', 'like', "%$search%")->get();
     return view('search', ['searchProduct' => $searchProduct]);
 })->name('search_product');
 
-
-
-// $searchProduct = DB::table('products')->where(function($query) use ($search){
-//     $query->where('name', 'like', "%$search%")
-//     ->orWhere('desc', 'like', "%$search%");
-// })
-// ->orWhereHas('quantity', function($query) use ($search){
-//     $query->where('amount', 'like', "%$search%");
-// })->get();
-// dd($searchProduct);
